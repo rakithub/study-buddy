@@ -1,0 +1,10 @@
+{% extends 'main.html' %}
+
+{% block content %}
+    <h1>{{ student.name }}'s Evaluation</h1>
+    {% if student.score > 70 %}
+        <p>{{ student.name }} is a smart student who managed to get {{ student.score }}pts on the final exam.</p>
+    {% else %}
+        <p>{{ student.name }} is a dumbass student who struggled to get {{ student.score }}pts on the final exam. Lee!</p>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends 'main.html' %}
+
+{% block content %}
+    <form action="{% url 'base:edit_message' message.id %}" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Edit">
+        <a href="{{ request.META.HTTP_REFERER }}">Cancel</a>
+    </form>
+{% endblock %}
